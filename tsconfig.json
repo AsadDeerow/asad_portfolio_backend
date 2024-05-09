@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "module": "commonjs",
+      "outDir": "./dist",
+      "rootDir": "./src",
+      "baseUrl": "./src",
+      "esModuleInterop": true,
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "strict": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "types": ["node"],
+      "paths": {
+        "*": ["../node_modules/*", "types/*"]
+      }
+    },
+    "scripts": {
+        "build": "tsc",
+        "start": "node dist/server.js",
+        "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/server.ts"
+      }
+      ,
+    "include": ["src/**/*.ts", "src/sync-db.ts"]
+  }
+  
